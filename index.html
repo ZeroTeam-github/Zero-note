@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Note</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <button class="menu-button" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1>Zero Note</h1>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search notes...">
+        </div>
+        <button class="view-toggle" id="viewToggle">
+            <i class="fas fa-th"></i>
+        </button>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-item active" data-view="notes">
+            <i class="far fa-lightbulb"></i>
+            <span>Notes</span>
+        </div>
+        <div class="sidebar-item" data-view="archive">
+            <i class="fas fa-archive"></i>
+            <span>Archive</span>
+        </div>
+        <div class="sidebar-item" data-view="trash">
+            <i class="fas fa-trash"></i>
+            <span>Trash</span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="add-note-container">
+            <div class="add-note">
+                <input type="text" placeholder="Take a note..." class="note-title-input">
+                <div class="quill-editor"></div>
+                <div class="note-actions">
+                    <div class="note-tools">
+                        <div class="color-palette">
+                            <button class="icon-button">
+                                <i class="fas fa-palette"></i>
+                            </button>
+                            <div class="color-options">
+                                <div class="color-option selected" data-color="#ffffff"
+                                    style="background-color: #ffffff"></div>
+                                <div class="color-option" data-color="#f28b82" style="background-color: #f28b82"></div>
+                                <div class="color-option" data-color="#fbbc04" style="background-color: #fbbc04"></div>
+                                <div class="color-option" data-color="#fff475" style="background-color: #fff475"></div>
+                                <div class="color-option" data-color="#ccff90" style="background-color: #ccff90"></div>
+                                <div class="color-option" data-color="#a7ffeb" style="background-color: #a7ffeb"></div>
+                                <div class="color-option" data-color="#cbf0f8" style="background-color: #cbf0f8"></div>
+                                <div class="color-option" data-color="#aecbfa" style="background-color: #aecbfa"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-buttons">
+                        <button class="close-btn">Close</button>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add Note</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes-container"></div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
